@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects | Divyanshi Agrawal</title>
+<meta name="description" content="Projects by Divyanshi Agrawal: EEG quality control, beta-burst decoding in patients, and sleep staging from wrist PPG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="inner">
+    <a class="brand" href="index.html">Divyanshi Agrawal</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="current" href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <h1>Projects</h1>
+
+  <div class="cards">
+
+    <article class="card">
+      <a class="figure" href="img/eeg_qc.png"><img src="img/eeg_qc.png" alt="Power spectra for two subjects, recorded about a year apart, with the alpha band (8 to 12 Hz) shaded." loading="lazy"></a>
+      <div class="card-body">
+        <p class="status done">Complete</p>
+        <h2>EEG quality control on a public dataset</h2>
+        <p>Resting-state EEG from OpenNeuro (ds003775), cleaned and written up as a decision journal.
+        The first quality check flagged 57 to 64 of 64 channels as bad in every subject.
+        That was the check failing, not the data: raw DC offset made every channel look like an outlier.
+        I discarded the pass and reran it on corrected data.
+        The journal records every choice and seven limitations that argue against the result.</p>
+        <div class="card-links">
+          <a class="button" href="https://github.com/divi2121/eeg-qc-ds003775">Code and journal on GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="figure" href="img/beta_burst_tf.png"><img src="img/beta_burst_tf.png" alt="Time-frequency power in the beta band over left and right motor cortex (C3, C4) during imagined left and right hand movement, one subject from a public dataset." loading="lazy"></a>
+      <div class="card-body">
+        <p class="status">In progress</p>
+        <h2>Beta bursts for brain-computer interfaces in patients</h2>
+        <p>My master's thesis at INSERM Lyon (CRNL), supervised by Jérémie Mattout and James Bonaiuto.
+        I tested whether a published beta-burst method for decoding imagined movement works in patients who cannot move:
+        locked-in, tetraplegic and disorders of consciousness.
+        It reproduced in healthy controls and did not transfer to patients.
+        I am now extending the work on public datasets.</p>
+        <div class="card-links">
+          <a class="button" href="https://github.com/divi2121/Beta-Burst-efficiency">Thesis code on GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="figure" href="img/ppg_n3_vs_n2.png"><img src="img/ppg_n3_vs_n2.png" alt="Per-person differences between deep sleep (N3) and light sleep (N2) in heart rate and heart rate variability, whole night versus matched hour of night." loading="lazy"></a>
+      <div class="card-body">
+        <p class="status">In progress</p>
+        <h2>Sleep staging from a wrist sensor</h2>
+        <p>Can sleep stages be read from the pulse signal of a wrist wearable (PPG)?
+        Built on the public DREAMT dataset, each person scored separately.
+        Feature groups are added one at a time, and each is kept only if it improves on the last.</p>
+        <div class="card-links">
+          <span class="button disabled">Code coming soon</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>Divyanshi Agrawal, 2026.</footer>
+
+</body>
+</html>
